@@ -23,26 +23,18 @@
             background-color: rgb(124, 146, 245);
             overflow: auto;
             text-align: center;
-        }   
-	    audio, embed {
-  position: absolute;
-  z-index: -9999;
-}
+      
     </style>
+	<script>
+window.onload = function() {
+  var context = new AudioContext();
+}
+</script>
 </head>
 <body>
-$(".toggle-audio").on('click', function(event) {
- audioPlaying = !audioPlaying;
- $("#background-audio").remove();
-
- clearInterval(backgroundAudio);
- if(audioPlaying){
-    $(".audio1").play();
-    //play audio 
-  }else{
-    $(".audio1").pause();
-
-}
+	<audio autoplay>
+      <source src="hal_9000_sorry_dave.mp3">
+</audio>
     <div class="sve">
     <p class="informacije">
         <h1>Kako izdresirati zmaja 3</h1>
