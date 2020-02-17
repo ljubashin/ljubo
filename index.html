@@ -24,11 +24,25 @@
             overflow: auto;
             text-align: center;
         }   
+	    audio, embed {
+  position: absolute;
+  z-index: -9999;
+}
     </style>
 </head>
 <body>
-<iframe src="muzika.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-</iframe> 
+$(".toggle-audio").on('click', function(event) {
+ audioPlaying = !audioPlaying;
+ $("#background-audio").remove();
+
+ clearInterval(backgroundAudio);
+ if(audioPlaying){
+    $(".audio1").play();
+    //play audio 
+  }else{
+    $(".audio1").pause();
+
+}
     <div class="sve">
     <p class="informacije">
         <h1>Kako izdresirati zmaja 3</h1>
